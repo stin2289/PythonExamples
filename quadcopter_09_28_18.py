@@ -12,5 +12,19 @@ class Quadcopter():
 
 		return ids_set.pop()
 
+	def find_stolen_copter_answer(self):
+		unique_delivery_id = 0
+
+		for i in self.delivery_ids:
+			unique_delivery_id ^= i 
+
+		return unique_delivery_id
+
 quadObject = Quadcopter()
+print("My solution")
 print(quadObject.find_stolen_copter())
+print("Their solution")
+print(quadObject.find_stolen_copter())
+
+
+
